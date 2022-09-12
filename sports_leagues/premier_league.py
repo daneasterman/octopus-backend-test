@@ -18,7 +18,7 @@ def get_premier_league():
 	PREM_LEAGUE_URI = f"{BASE_URI}/competitions/{PREM_LEAGUE_ID}/matches?season={SEASON}&limit={MAX_RESULTS}"
 
 	response = requests.get(PREM_LEAGUE_URI, headers=HEADERS).json()
-	matches_dict = defaultdict(list)
+	matches = []
 	for match in response['matches']:
 		match = {
 			"home_team": {
@@ -31,8 +31,7 @@ def get_premier_league():
 			},
 			"date": match["utcDate"]
 		}
-		matches_dict["matches"].append({"match": match})
-	pprint(matches_dict)
+		matches.append(match)
+	return matches
 
-get_premier_league()
 	
