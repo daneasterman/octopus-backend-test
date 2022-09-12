@@ -8,4 +8,4 @@ app.config.from_object(env_config)
 
 @app.route("/")
 def index():
-	return ""
+	return "hello world!"
