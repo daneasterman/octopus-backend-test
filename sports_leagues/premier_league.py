@@ -18,7 +18,6 @@ def get_premier_league():
 	PREM_LEAGUE_URI = f"{BASE_URI}/competitions/{PREM_LEAGUE_ID}/matches?season={SEASON}&limit={MAX_RESULTS}"
 
 	response = requests.get(PREM_LEAGUE_URI, headers=HEADERS).json()
-
 	matches_dict = defaultdict(list)
 	for match in response['matches']:
 		match = {
