@@ -8,7 +8,7 @@ def get_nba():
 	SEASON = 2020
 	# Total Regular Season Games:
 	MAX_RESULTS = 82
-	FULL_NBA_URI = F"{BASE_URI}?seasons[]={SEASON}&per_page={MAX_RESULTS}"
+	FULL_NBA_URI = f"{BASE_URI}?seasons[]={SEASON}&per_page={MAX_RESULTS}"
 	
 	response = requests.get(FULL_NBA_URI).json()
 	matches_dict = defaultdict(list)
@@ -24,8 +24,8 @@ def get_nba():
 			},
 			"date": match["date"]
 		}
-		matches_dict["matches"].append({"match": match})
-	pprint(matches_dict)
+		matches_dict["nba_matches"].append(match)
+	return matches_dict
 
-get_nba()
+# get_nba()
 
