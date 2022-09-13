@@ -27,5 +27,3 @@ def get_nba():
 		matches_dict["nba_matches"].append(match)
 	return matches_dict
 
-# get_nba()
-
