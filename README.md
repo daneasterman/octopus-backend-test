@@ -1,6 +1,7 @@
 ### Install:
 
 Run `pip install` to install all the dependencies in `requirements.txt` 
+You also need to create a `.env` file with your api key from https://www.football-data.org/documentation/quickstart using `FOOTBALL_API_KEY` as the environment variable.
 
 ### Run the local Flask project:
 `flask run`
