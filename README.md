@@ -9,7 +9,7 @@ You also need to create a `.env` file with your api key from https://www.footbal
 
 ### Heroku Deployment:
 The json data output of the project can be viewed here: 
-`https://octopus-backend-test.herokuapp.com/api`
+https://octopus-backend-test.herokuapp.com/api
 
 ### Notes:
 
